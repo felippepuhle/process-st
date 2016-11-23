@@ -1,0 +1,13 @@
+{
+  "name": "process-st",
+  "version": "1.0.0",
+  "description": "Process Street - Blueimp File Upload plugin and Wistia",
+  "main": "index.js",
+  "author": "Felippe Rodrigo Puhle",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "bootstrap": "^3.3.7",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0"
+  }
+}
