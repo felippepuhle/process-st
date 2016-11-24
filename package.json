@@ -6,6 +6,7 @@
   "author": "Felippe Rodrigo Puhle",
   "dependencies": {
     "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
     "bootstrap": "^3.3.7",
     "ejs": "^2.5.2",
     "express": "^4.14.0",
