@@ -1,9 +1,18 @@
-<div class="page-header" ng-if="error == null">
-  <h1 ng-if="error == null && loading">Loading...</h1>
-  <h1 ng-if="error == null && !loading">{{ project.name }}</h1>
-  <h1 ng-if="error != null">Error {{ error.status }} <small>{{ error.statusText }}</small></h1>
+<div ng-if="loading" class="alert alert-info">
+  Loading...
 </div>
 
-<script ng-src="{{ videoUrl  }}" async></script>
-<script ng-src="//fast.wistia.com/assets/external/E-v1.js" async></script>
-<div class="wistia_embed wistia_async_hig1zi65se" style="height:360px;width:640px">&nbsp;</div>
+<div ng-if="!loading" class="page-header">
+  <h1>{{ project.name }}</h1>
+</div>
+
+<div ng-if="error != null" class="alert alert-danger">
+  Error {{ error.status }}: {{ error.statusText }}
+</div>
+
+<div ng-repeat="media in project.medias" class="panel panel-default">
+  <div class="panel-heading">{{ media.name }}</div>
+  <div class="panel-body">
+    <div class="wistia_embed wistia_async_{{ media.hashed_id }}">&nbsp;</div>
+  </div>
+</div>
