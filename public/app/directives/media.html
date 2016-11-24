@@ -1,0 +1,10 @@
+<div class="panel panel-default">
+  <div class="panel-heading">{{ media.name }}</div>
+  <div class="panel-body">
+    <div ng-if="media.status == 'ready'" class="wistia_embed wistia_async_{{ media.hashed_id }}">&nbsp;</div>
+    <div ng-if="media.status != 'ready'" class="text-center">
+      <p><b>{{media.status}}</b></p>
+      <p>{{media.progress| number:2}}%</p>
+    </div>
+  </div>
+</div>

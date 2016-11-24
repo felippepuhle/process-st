@@ -1,5 +1,5 @@
 angular.module('ProcessStApp.controllers')
-  .controller('IndexController', function($scope, WistiaService) {
+  .controller('IndexController', function($scope, ProjectService) {
 
     $scope.loading = false;
     $scope.error = null;
@@ -9,7 +9,7 @@ angular.module('ProcessStApp.controllers')
     $scope.list = function() {
       $scope.loading = true;
 
-      WistiaService.list()
+      ProjectService.list()
         .then(function(result) {
           $scope.loading = false;
           $scope.error = null;
@@ -24,7 +24,7 @@ angular.module('ProcessStApp.controllers')
 
     $scope.delete = function(project) {
       if(confirm('Are you sure you want to delete "' + project.name + '" ?')) {
-        WistiaService.delete(project.hashedId)
+        ProjectService.delete(project.hashedId)
           .then(function(result) {
             $scope.success = '"' + project.name + '" deleted.';
             $scope.list();

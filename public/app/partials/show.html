@@ -10,9 +10,4 @@
   Error {{ error.status }}: {{ error.statusText }}
 </div>
 
-<div ng-repeat="media in project.medias" class="panel panel-default">
-  <div class="panel-heading">{{ media.name }}</div>
-  <div class="panel-body">
-    <div class="wistia_embed wistia_async_{{ media.hashed_id }}">&nbsp;</div>
-  </div>
-</div>
+<media ng-repeat="media in project.medias" media="media"/>

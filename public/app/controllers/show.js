@@ -1,11 +1,11 @@
 angular.module('ProcessStApp.controllers')
-  .controller('ShowController', function($scope, $routeParams, $sce, WistiaService) {
+  .controller('ShowController', function($scope, $routeParams, $sce, ProjectService) {
 
     $scope.loading = true;
     $scope.error = null;
     $scope.project = null;
 
-    WistiaService.show($routeParams.id)
+    ProjectService.show($routeParams.id)
       .then(function(result) {
         $scope.project = result.data;
         $scope.loading = false;

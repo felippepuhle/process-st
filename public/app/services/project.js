@@ -1,5 +1,5 @@
 angular.module('ProcessStApp.services')
-  .factory('WistiaService', function($http) {
+  .factory('ProjectService', function($http) {
 
     return {
       list: function() {

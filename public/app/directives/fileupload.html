@@ -1,0 +1,18 @@
+<div>
+  <div ng-if="error != null" class="alert alert-danger">
+    {{ error }}
+  </div>
+
+  <div class="progress">
+    <div class="progress-bar progress-bar-success" role="progressbar"
+      aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+      ng-style="{'width': progress + '%' }">{{progress}}%</div>
+  </div>
+
+  <span class="btn btn-primary btn-file">
+    Upload File
+    <input id="{{id}}" class="btn" type="file" name="file">
+  </span>
+
+  <media ng-if="media != null" media="media"/>
+</div>
